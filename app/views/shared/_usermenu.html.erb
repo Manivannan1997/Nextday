@@ -1,0 +1,21 @@
+
+<% if user_signed_in? %>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-sm-2 sidebar1">
+                <div class="logo">
+                    <img src="http://lorempixel.com/output/people-q-g-64-64-1.jpg" class="img-responsive center-block" alt="Logo">
+                </div>
+                <br>
+                <div class="left-navigation">
+                    <ul class="list">
+                        <h5><strong>Ruby On Rails</strong></h5>
+                        <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+                        <li><%= link_to 'User Mailer Preview', "/rails/mailers/#{current_user}" %></li>
+                        <li><%= link_to 'Signout', destroy_user_session_path, method: :delete %></li>
+                    </ul>
+                   
+                </div>
+            </div>
+    </div>
+    <% end %>

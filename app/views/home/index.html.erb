@@ -1,0 +1,12 @@
+<%= render 'shared/usermenu' %>
+<div class="home">
+<h1>Welcome to Nextday</h1>
+<% if user_signed_in? %>
+
+<%= link_to 'Continue', posts_path%>
+
+<% else %>
+<%= link_to 'Signup', new_user_registration_path %>
+<%= link_to 'Signin', new_user_session_path %>
+<% end %>
+</div>
